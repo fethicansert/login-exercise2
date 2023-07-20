@@ -16,40 +16,49 @@ body{
 }
 
 .grid{
-    background-color: white;
     display: grid;
     height: 80%;
     width: 90%;
     max-width: 1400px;
     min-height: 650px;
-    grid-template-columns: minmax(310px,1fr) minmax(500px,2fr);
+    grid-template-columns: minmax(310px,1fr) minmax(650px,2fr);
 }
-.col{
-  box-sizing: border-box;
-}
+
 .col-1{
     background-color: white;
     display: grid;
-    grid-template-rows: 1fr 1fr 200px;
+    grid-template-rows: minmax(200px,1fr) minmax(250,1fr) 1fr 100px;
 }
+
 .col-1 p{
     border-bottom: 1px solid black;
-}
-.col-2{
-  
-    background-color: seagreen;
 }
 
 .cell{
     display: flex;
     flex-flow: column;
-    justify-content: end;
     margin: 0 20px;
-    
+    /* border-bottom: solid thin black; */
 }
 
 .cell-1{
-    
+    justify-content: center;
+}
+
+.cell-2{
+    justify-content: center;
+   
+}
+
+.cell-3{
+    margin-top: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content:space-between;
+}
+
+input[type='radio']:checked{
+    accent-color: black;
 }
 
 .span{
@@ -58,14 +67,10 @@ body{
     font-weight: 500;
 }
 
-.cell-2{
-    justify-content: end;
-    
-}
-
 .label{
     font-weight: bold;
     font-size: 0.7em;
+    margin-bottom: 0.5em;
 }
 
 .text-box{
@@ -75,10 +80,21 @@ body{
     margin-bottom: 15px;
 }
 
+.text-box:hover{
+    background: rgb(216, 216, 216);
+}
+
+.text-box:focus{
+    outline: none;
+}
+
 .line{
     display: flex;
     align-items: center;
     position: relative;
+}
+.line-bottom{
+ justify-content:space-between;
 }
 
 .me{
@@ -88,14 +104,10 @@ body{
 .forgot{
     position: absolute;
     right: 1%;
+    margin: 0;
 }
 
-.cell-3{
-    margin-top: 5px;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-}
+
 
 .button{
     padding: 12px;
@@ -106,6 +118,14 @@ body{
 
 .bolt-account{
     margin-left: 10px;
+    margin-bottom: 0;
+}
+
+.col-2{ 
+    background-color: seagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img{
